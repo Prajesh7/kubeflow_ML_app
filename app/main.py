@@ -15,7 +15,7 @@ def get_dail():
     import matplotlib.pyplot as plt
     import optuna
 
-    data = pd.read_csv("kubeflow_app/kubeflow_ML_app/app/SAIL.NS.csv")
+    data = pd.read_csv("SAIL.NS.csv")
     data['year'] = pd.to_datetime(data['Date']).dt.year
     data['month'] = pd.to_datetime(data['Date']).dt.month
     data['day'] = pd.to_datetime(data['Date']).dt.day
