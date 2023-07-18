@@ -3,6 +3,10 @@ from fastapi.responses import StreamingResponse
 
 app = FastAPI()
 
+@app.get("/")
+def root():
+    return {"hello": "world"}
+    
 @app.get("/sail")
 def get_dail():
     import numpy as np
