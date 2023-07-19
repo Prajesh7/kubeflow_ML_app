@@ -11,9 +11,7 @@ def root():
 def get_dail():
     import numpy as np
     import pandas as pd
-    import tensorflow as tf
     import matplotlib.pyplot as plt
-    import optuna
 
     data = pd.read_csv("app/SAIL.NS.csv")
     data['year'] = pd.to_datetime(data['Date']).dt.year
