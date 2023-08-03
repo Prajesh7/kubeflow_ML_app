@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: mlFlowProject
+Version: 0.0.0
+Summary: A simple Python ML app
+Home-page: https://github.com/Prajesh7/kubeflow_ML_app
+Author: Prajesh7
+Author-email: prajeshlearningml@gmail.com
+Project-URL: Bug Tracker, https://github.com/Prajesh7/kubeflow_ML_app/issues
+
+# kubeflow_ML_app
+first ML app using kubeflow
