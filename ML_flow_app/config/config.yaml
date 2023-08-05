@@ -3,6 +3,6 @@ artifacts_root: artifacts
 
 data_ingestion:
   root_dir: artifacts/data_ingestion
-  source_URL: https://github.com/Prajesh7/kubeflow_ML_app/blob/main/SAIL.NS.zip
-  local_data_file: artifacts/data_ingestion/data.zip
+  source_URL: https://query1.finance.yahoo.com/v7/finance/download/SAIL.NS?period1=820454400&period2=1691193600&interval=1d&events=history&includeAdjustedClose=true
+  local_data_file: artifacts/data_ingestion/data.csv
   unzip_dir: artifacts/data_ingestion

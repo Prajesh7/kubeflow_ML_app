@@ -134,3 +134,115 @@ X-GitHub-Request-Id: E5C6:2C5F63:810AD1:955614:64CE8DDD
 connection: close
 
 ]
+[2023-08-05 23:31:55,871: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-08-05 23:31:55,872: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-08-05 23:31:55,874: INFO: common: yaml file: schema.yaml loaded successfully]
+[2023-08-05 23:31:55,874: INFO: common: created directory at: artifacts]
+[2023-08-05 23:31:55,875: INFO: common: created directory at: artifacts/data_ingestion]
+[2023-08-05 23:31:56,451: INFO: 2174002776: artifacts/data_ingestion/data.zip download! with following info: 
+Server: GitHub.com
+Date: Sat, 05 Aug 2023 18:01:57 GMT
+Content-Type: text/html; charset=utf-8
+Vary: X-PJAX, X-PJAX-Container, Turbo-Visit, Turbo-Frame, Accept-Encoding, Accept, X-Requested-With
+ETag: W/"3b18d6d61466e878ebcf67f7bff51e65"
+Cache-Control: max-age=0, private, must-revalidate
+Strict-Transport-Security: max-age=31536000; includeSubdomains; preload
+X-Frame-Options: deny
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Referrer-Policy: no-referrer-when-downgrade
+Content-Security-Policy: default-src 'none'; base-uri 'self'; child-src github.com/assets-cdn/worker/ gist.github.com/assets-cdn/worker/; connect-src 'self' uploads.github.com objects-origin.githubusercontent.com www.githubstatus.com collector.github.com raw.githubusercontent.com api.github.com github-cloud.s3.amazonaws.com github-production-repository-file-5c1aeb.s3.amazonaws.com github-production-upload-manifest-file-7fdce7.s3.amazonaws.com github-production-user-asset-6210df.s3.amazonaws.com cdn.optimizely.com logx.optimizely.com/v1/events *.actions.githubusercontent.com productionresultssa0.blob.core.windows.net/ productionresultssa1.blob.core.windows.net/ productionresultssa2.blob.core.windows.net/ productionresultssa3.blob.core.windows.net/ productionresultssa4.blob.core.windows.net/ wss://*.actions.githubusercontent.com github-production-repository-image-32fea6.s3.amazonaws.com github-production-release-asset-2e65be.s3.amazonaws.com insights.github.com wss://alive.github.com; font-src github.githubassets.com; form-action 'self' github.com gist.github.com objects-origin.githubusercontent.com; frame-ancestors 'none'; frame-src viewscreen.githubusercontent.com notebooks.githubusercontent.com; img-src 'self' data: github.githubassets.com media.githubusercontent.com camo.githubusercontent.com identicons.github.com avatars.githubusercontent.com github-cloud.s3.amazonaws.com objects.githubusercontent.com objects-origin.githubusercontent.com secured-user-images.githubusercontent.com/ user-images.githubusercontent.com/ private-user-images.githubusercontent.com opengraph.githubassets.com github-production-user-asset-6210df.s3.amazonaws.com customer-stories-feed.github.com spotlights-feed.github.com *.githubusercontent.com; manifest-src 'self'; media-src github.com user-images.githubusercontent.com/ secured-user-images.githubusercontent.com/ private-user-images.githubusercontent.com; script-src github.githubassets.com; style-src 'unsafe-inline' github.githubassets.com; upgrade-insecure-requests; worker-src github.com/assets-cdn/worker/ gist.github.com/assets-cdn/worker/
+Set-Cookie: _gh_sess=vdRo8PyMVUOzTtM5Uv0cza7Q8ksBh9dcsiaPrcfoXtDSl4Sk7WInnla9dg%2BPZ4x29c5I2dy91EdFLtAA4wjUr1SnZwmRlWp1HzyUHnHIGnjaxlHtXEahIedvjFNYL030cPvT5X5KeOuGt13UiFTrqjRDI90KpTPk7OH3FkavwSBcKR%2FsvUknZeuPXB4%2But0eSlaRZcoQXZ4IBm7ZCVRG1yDZ%2FumEAEy0%2Bbub084Sr9VlQnW1FZ5r%2BO2jBmhT9NPJA3C609kFrsLKMwYKuObeeg%3D%3D--qCjZgMgSSpblR6ci--lbbbg4ubmGGYP9FXWkJKbg%3D%3D; Path=/; HttpOnly; Secure; SameSite=Lax
+Set-Cookie: _octo=GH1.1.893542985.1691258517; Path=/; Domain=github.com; Expires=Mon, 05 Aug 2024 18:01:57 GMT; Secure; SameSite=Lax
+Set-Cookie: logged_in=no; Path=/; Domain=github.com; Expires=Mon, 05 Aug 2024 18:01:57 GMT; HttpOnly; Secure; SameSite=Lax
+Accept-Ranges: bytes
+Transfer-Encoding: chunked
+X-GitHub-Request-Id: E5FD:2D0C09:80B054:9504F6:64CE8E95
+connection: close
+
+]
+[2023-08-05 23:33:00,240: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-08-05 23:33:00,241: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-08-05 23:33:00,242: INFO: common: yaml file: schema.yaml loaded successfully]
+[2023-08-05 23:33:00,243: INFO: common: created directory at: artifacts]
+[2023-08-05 23:33:00,243: INFO: common: created directory at: artifacts/data_ingestion]
+[2023-08-05 23:33:01,104: INFO: 2174002776: artifacts/data_ingestion/data.csv download! with following info: 
+Server: GitHub.com
+Date: Sat, 05 Aug 2023 18:03:01 GMT
+Content-Type: text/html; charset=utf-8
+Vary: X-PJAX, X-PJAX-Container, Turbo-Visit, Turbo-Frame, Accept-Encoding, Accept, X-Requested-With
+ETag: W/"bf53b7c23bca34e3c6b604ebc03dbfed"
+Cache-Control: max-age=0, private, must-revalidate
+Strict-Transport-Security: max-age=31536000; includeSubdomains; preload
+X-Frame-Options: deny
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Referrer-Policy: no-referrer-when-downgrade
+Content-Security-Policy: default-src 'none'; base-uri 'self'; child-src github.com/assets-cdn/worker/ gist.github.com/assets-cdn/worker/; connect-src 'self' uploads.github.com objects-origin.githubusercontent.com www.githubstatus.com collector.github.com raw.githubusercontent.com api.github.com github-cloud.s3.amazonaws.com github-production-repository-file-5c1aeb.s3.amazonaws.com github-production-upload-manifest-file-7fdce7.s3.amazonaws.com github-production-user-asset-6210df.s3.amazonaws.com cdn.optimizely.com logx.optimizely.com/v1/events *.actions.githubusercontent.com productionresultssa0.blob.core.windows.net/ productionresultssa1.blob.core.windows.net/ productionresultssa2.blob.core.windows.net/ productionresultssa3.blob.core.windows.net/ productionresultssa4.blob.core.windows.net/ wss://*.actions.githubusercontent.com github-production-repository-image-32fea6.s3.amazonaws.com github-production-release-asset-2e65be.s3.amazonaws.com insights.github.com wss://alive.github.com; font-src github.githubassets.com; form-action 'self' github.com gist.github.com objects-origin.githubusercontent.com; frame-ancestors 'none'; frame-src viewscreen.githubusercontent.com notebooks.githubusercontent.com; img-src 'self' data: github.githubassets.com media.githubusercontent.com camo.githubusercontent.com identicons.github.com avatars.githubusercontent.com github-cloud.s3.amazonaws.com objects.githubusercontent.com objects-origin.githubusercontent.com secured-user-images.githubusercontent.com/ user-images.githubusercontent.com/ private-user-images.githubusercontent.com opengraph.githubassets.com github-production-user-asset-6210df.s3.amazonaws.com customer-stories-feed.github.com spotlights-feed.github.com *.githubusercontent.com; manifest-src 'self'; media-src github.com user-images.githubusercontent.com/ secured-user-images.githubusercontent.com/ private-user-images.githubusercontent.com; script-src github.githubassets.com; style-src 'unsafe-inline' github.githubassets.com; upgrade-insecure-requests; worker-src github.com/assets-cdn/worker/ gist.github.com/assets-cdn/worker/
+Set-Cookie: _gh_sess=9kJ61ectFMBmaDKkQills%2FkQcVVf4xa5UZRM0ksXdNyycwvHF8DECW0aRaiNSxeUHKRl8nRkQOjwL4XCKFCLKfolO0kJdeaqJoYXGz9nV749lU1CS9QjXNpmAsk0OJYooslQoRquJzhtuWX2nDiRIQZIBXnsm9GZ1TMogRXigMEG%2F39k3GXbcKoWq7CliZv9VJghwxzXxx2dxeA%2Fe4e%2BC3SUGuu2%2FCPfBE80imDZFJRLkDUkIx3g1Y27pDNdCQ8rbyvJAgsFSo8Oh6Rjf2n8Qw%3D%3D--Mp2X9qJahUaZ6zRX--28V8GwK3Z15%2FhcMe4TetoA%3D%3D; Path=/; HttpOnly; Secure; SameSite=Lax
+Set-Cookie: _octo=GH1.1.1812413001.1691258581; Path=/; Domain=github.com; Expires=Mon, 05 Aug 2024 18:03:01 GMT; Secure; SameSite=Lax
+Set-Cookie: logged_in=no; Path=/; Domain=github.com; Expires=Mon, 05 Aug 2024 18:03:01 GMT; HttpOnly; Secure; SameSite=Lax
+Accept-Ranges: bytes
+Transfer-Encoding: chunked
+X-GitHub-Request-Id: E608:2D1A09:81E0A6:9638AC:64CE8ED5
+connection: close
+
+]
+[2023-08-05 23:34:21,504: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-08-05 23:34:21,506: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-08-05 23:34:21,507: INFO: common: yaml file: schema.yaml loaded successfully]
+[2023-08-05 23:34:21,508: INFO: common: created directory at: artifacts]
+[2023-08-05 23:34:21,509: INFO: common: created directory at: artifacts/data_ingestion]
+[2023-08-05 23:34:22,030: INFO: 2174002776: artifacts/data_ingestion/data.csv download! with following info: 
+content-disposition: attachment; filename=SAIL.NS.csv
+content-type: text/csv;charset=utf-8
+vary: Origin
+cache-control: private, max-age=10, stale-while-revalidate=20
+y-rid: 5sdcj9hict3p6
+x-yahoo-request-id: 5sdcj9hict3p6
+x-request-id: cdbb6cf4-ba47-4cba-a3c1-0054f6e08082
+x-envoy-upstream-service-time: 124
+date: Sat, 05 Aug 2023 18:04:22 GMT
+server: ATS
+x-envoy-decorator-operation: finance-chart-api--mtls-production-sg3.finance-k8s.svc.yahoo.local:4080/*
+Age: 0
+Strict-Transport-Security: max-age=31536000
+Referrer-Policy: no-referrer-when-downgrade
+X-Frame-Options: SAMEORIGIN
+X-XSS-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+Transfer-Encoding: chunked
+Connection: close
+
+]
+[2023-08-05 23:49:57,680: INFO: main: >>>> stage data ingestion stage started <<<<]
+[2023-08-05 23:49:57,682: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-08-05 23:49:57,682: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-08-05 23:49:57,683: INFO: common: yaml file: schema.yaml loaded successfully]
+[2023-08-05 23:49:57,683: INFO: common: created directory at: artifacts]
+[2023-08-05 23:49:57,684: INFO: common: created directory at: artifacts/data_ingestion]
+[2023-08-05 23:49:58,216: INFO: data_ingestion: artifacts/data_ingestion/data.csv download! with following info: 
+content-disposition: attachment; filename=SAIL.NS.csv
+content-type: text/csv;charset=utf-8
+vary: Origin
+cache-control: private, max-age=10, stale-while-revalidate=20
+y-rid: 2s1l0adict4me
+x-yahoo-request-id: 2s1l0adict4me
+x-request-id: 01ed9728-c6ed-4c2f-bc8d-2f44a7be5d08
+x-envoy-upstream-service-time: 93
+date: Sat, 05 Aug 2023 18:19:58 GMT
+server: ATS
+x-envoy-decorator-operation: finance-chart-api--mtls-production-sg3.finance-k8s.svc.yahoo.local:4080/*
+Age: 3
+Strict-Transport-Security: max-age=31536000
+Referrer-Policy: no-referrer-when-downgrade
+X-Frame-Options: SAMEORIGIN
+X-XSS-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+Transfer-Encoding: chunked
+Connection: close
+
+]
+[2023-08-05 23:49:58,219: INFO: main: >>>> stage data ingestion stage completed <<<<
+
+x========x]
