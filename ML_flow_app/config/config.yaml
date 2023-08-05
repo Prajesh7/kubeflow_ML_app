@@ -6,3 +6,8 @@ data_ingestion:
   source_URL: https://query1.finance.yahoo.com/v7/finance/download/SAIL.NS?period1=820454400&period2=1691193600&interval=1d&events=history&includeAdjustedClose=true
   local_data_file: artifacts/data_ingestion/data.csv
   unzip_dir: artifacts/data_ingestion
+
+data_validation:
+  root_dir: artifacts/data_validation
+  unzip_data_dir: artifacts/data_ingestion/data.csv
+  STATUS_FILE: artifacts/data_validation/status.txt

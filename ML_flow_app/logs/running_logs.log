@@ -277,3 +277,76 @@ Connection: close
 [2023-08-05 23:56:01,171: INFO: main: >>>> stage data ingestion stage completed <<<<
 
 x========x]
+[2023-08-06 00:31:42,139: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-08-06 00:31:42,141: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-08-06 00:31:42,142: INFO: common: yaml file: schema.yaml loaded successfully]
+[2023-08-06 00:31:42,143: INFO: common: created directory at: artifacts]
+[2023-08-06 00:31:53,317: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-08-06 00:31:53,319: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-08-06 00:31:53,321: INFO: common: yaml file: schema.yaml loaded successfully]
+[2023-08-06 00:31:53,321: INFO: common: created directory at: artifacts]
+[2023-08-06 00:34:52,209: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-08-06 00:34:52,210: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-08-06 00:34:52,212: INFO: common: yaml file: schema.yaml loaded successfully]
+[2023-08-06 00:34:52,213: INFO: common: created directory at: artifacts]
+[2023-08-06 00:42:07,784: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-08-06 00:42:07,789: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-08-06 00:42:07,796: INFO: common: yaml file: schema.yaml loaded successfully]
+[2023-08-06 00:42:07,798: INFO: common: created directory at: artifacts]
+[2023-08-06 00:44:17,364: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-08-06 00:44:17,365: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-08-06 00:44:17,368: INFO: common: yaml file: schema.yaml loaded successfully]
+[2023-08-06 00:44:17,369: INFO: common: created directory at: artifacts]
+[2023-08-06 00:44:22,960: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-08-06 00:44:22,962: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-08-06 00:44:22,964: INFO: common: yaml file: schema.yaml loaded successfully]
+[2023-08-06 00:44:22,966: INFO: common: created directory at: artifacts]
+[2023-08-06 00:46:40,005: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-08-06 00:46:40,006: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-08-06 00:46:40,008: INFO: common: yaml file: schema.yaml loaded successfully]
+[2023-08-06 00:46:40,009: INFO: common: created directory at: artifacts]
+[2023-08-06 00:46:53,927: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-08-06 00:46:53,928: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-08-06 00:46:53,930: INFO: common: yaml file: schema.yaml loaded successfully]
+[2023-08-06 00:46:53,932: INFO: common: created directory at: artifacts]
+[2023-08-06 00:46:53,933: INFO: common: created directory at: artifacts/data_validation]
+[2023-08-06 00:56:43,806: INFO: main: >>>> stage data ingestion stage started <<<<]
+[2023-08-06 00:56:43,807: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-08-06 00:56:43,808: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-08-06 00:56:43,809: INFO: common: yaml file: schema.yaml loaded successfully]
+[2023-08-06 00:56:43,810: INFO: common: created directory at: artifacts]
+[2023-08-06 00:56:43,810: INFO: common: created directory at: artifacts/data_ingestion]
+[2023-08-06 00:56:44,228: INFO: data_ingestion: artifacts/data_ingestion/data.csv download! with following info: 
+content-disposition: attachment; filename=SAIL.NS.csv
+content-type: text/csv;charset=utf-8
+vary: Origin
+cache-control: private, max-age=10, stale-while-revalidate=20
+y-rid: 4coa5btict8jl
+x-yahoo-request-id: 4coa5btict8jl
+x-request-id: ca6db94e-2185-4efb-bf73-26228feef640
+x-envoy-upstream-service-time: 125
+date: Sat, 05 Aug 2023 19:26:45 GMT
+server: ATS
+x-envoy-decorator-operation: finance-chart-api--mtls-production-sg3.finance-k8s.svc.yahoo.local:4080/*
+Age: 0
+Strict-Transport-Security: max-age=31536000
+Referrer-Policy: no-referrer-when-downgrade
+X-Frame-Options: SAMEORIGIN
+X-XSS-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+Transfer-Encoding: chunked
+Connection: close
+
+]
+[2023-08-06 00:56:44,231: INFO: main: >>>> stage data ingestion stage completed <<<<
+
+x========x]
+[2023-08-06 00:56:44,232: INFO: main: >>>> stage data validation stage started <<<<]
+[2023-08-06 00:56:44,234: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-08-06 00:56:44,235: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-08-06 00:56:44,236: INFO: common: yaml file: schema.yaml loaded successfully]
+[2023-08-06 00:56:44,237: INFO: common: created directory at: artifacts]
+[2023-08-06 00:56:44,238: INFO: common: created directory at: artifacts/data_validation]
+[2023-08-06 00:56:44,260: INFO: main: >>>> stage data validation stage completed <<<<
+
+x========x]
