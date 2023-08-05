@@ -246,3 +246,34 @@ Connection: close
 [2023-08-05 23:49:58,219: INFO: main: >>>> stage data ingestion stage completed <<<<
 
 x========x]
+[2023-08-05 23:56:00,633: INFO: main: >>>> stage data ingestion stage started <<<<]
+[2023-08-05 23:56:00,635: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-08-05 23:56:00,636: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-08-05 23:56:00,636: INFO: common: yaml file: schema.yaml loaded successfully]
+[2023-08-05 23:56:00,637: INFO: common: created directory at: artifacts]
+[2023-08-05 23:56:00,637: INFO: common: created directory at: artifacts/data_ingestion]
+[2023-08-05 23:56:01,169: INFO: data_ingestion: artifacts/data_ingestion/data.csv download! with following info: 
+content-disposition: attachment; filename=SAIL.NS.csv
+content-type: text/csv;charset=utf-8
+vary: Origin
+cache-control: private, max-age=10, stale-while-revalidate=20
+y-rid: 3bkchcpict51p
+x-yahoo-request-id: 3bkchcpict51p
+x-request-id: bb9c80e5-9052-4cb8-9ea5-bb5732ffbc30
+x-envoy-upstream-service-time: 106
+date: Sat, 05 Aug 2023 18:26:01 GMT
+server: ATS
+x-envoy-decorator-operation: finance-chart-api--mtls-production-sg3.finance-k8s.svc.yahoo.local:4080/*
+Age: 3
+Strict-Transport-Security: max-age=31536000
+Referrer-Policy: no-referrer-when-downgrade
+X-Frame-Options: SAMEORIGIN
+X-XSS-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+Transfer-Encoding: chunked
+Connection: close
+
+]
+[2023-08-05 23:56:01,171: INFO: main: >>>> stage data ingestion stage completed <<<<
+
+x========x]
