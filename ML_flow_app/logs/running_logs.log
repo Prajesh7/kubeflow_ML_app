@@ -13,3 +13,124 @@
 [2023-08-05 23:18:10,486: INFO: common: yaml file: schema.yaml loaded successfully]
 [2023-08-05 23:18:10,487: INFO: common: created directory at: artifacts]
 [2023-08-05 23:18:10,487: INFO: common: created directory at: artifacts/data_ingestion]
+[2023-08-05 23:19:23,044: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-08-05 23:19:23,046: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-08-05 23:19:23,047: INFO: common: yaml file: schema.yaml loaded successfully]
+[2023-08-05 23:19:23,047: INFO: common: created directory at: artifacts]
+[2023-08-05 23:19:23,048: INFO: common: created directory at: artifacts/data_ingestion]
+[2023-08-05 23:21:13,471: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-08-05 23:21:13,472: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-08-05 23:21:13,473: INFO: common: yaml file: schema.yaml loaded successfully]
+[2023-08-05 23:21:13,474: INFO: common: created directory at: artifacts]
+[2023-08-05 23:21:13,475: INFO: common: created directory at: artifacts/data_ingestion]
+[2023-08-05 23:22:44,064: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-08-05 23:22:44,066: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-08-05 23:22:44,067: INFO: common: yaml file: schema.yaml loaded successfully]
+[2023-08-05 23:22:44,068: INFO: common: created directory at: artifacts]
+[2023-08-05 23:22:44,069: INFO: common: created directory at: artifacts/data_ingestion]
+[2023-08-05 23:23:28,870: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-08-05 23:23:28,871: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-08-05 23:23:28,873: INFO: common: yaml file: schema.yaml loaded successfully]
+[2023-08-05 23:23:28,874: INFO: common: created directory at: artifacts]
+[2023-08-05 23:23:28,875: INFO: common: created directory at: artifacts/data_ingestion]
+[2023-08-05 23:23:35,726: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-08-05 23:23:35,727: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-08-05 23:23:35,728: INFO: common: yaml file: schema.yaml loaded successfully]
+[2023-08-05 23:23:35,729: INFO: common: created directory at: artifacts]
+[2023-08-05 23:23:35,730: INFO: common: created directory at: artifacts/data_ingestion]
+[2023-08-05 23:23:43,839: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-08-05 23:23:43,841: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-08-05 23:23:43,842: INFO: common: yaml file: schema.yaml loaded successfully]
+[2023-08-05 23:23:43,843: INFO: common: created directory at: artifacts]
+[2023-08-05 23:23:43,844: INFO: common: created directory at: artifacts/data_ingestion]
+[2023-08-05 23:23:54,543: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-08-05 23:23:54,544: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-08-05 23:23:54,546: INFO: common: yaml file: schema.yaml loaded successfully]
+[2023-08-05 23:23:54,547: INFO: common: created directory at: artifacts]
+[2023-08-05 23:23:58,872: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-08-05 23:23:58,874: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-08-05 23:23:58,875: INFO: common: yaml file: schema.yaml loaded successfully]
+[2023-08-05 23:23:58,876: INFO: common: created directory at: artifacts]
+[2023-08-05 23:23:58,877: INFO: common: created directory at: artifacts/data_ingestion]
+[2023-08-05 23:24:13,239: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-08-05 23:24:13,240: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-08-05 23:24:13,241: INFO: common: yaml file: schema.yaml loaded successfully]
+[2023-08-05 23:24:13,242: INFO: common: created directory at: artifacts]
+[2023-08-05 23:24:13,243: INFO: common: created directory at: artifacts/data_ingestion]
+[2023-08-05 23:24:17,823: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-08-05 23:24:17,824: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-08-05 23:24:17,826: INFO: common: yaml file: schema.yaml loaded successfully]
+[2023-08-05 23:24:17,827: INFO: common: created directory at: artifacts]
+[2023-08-05 23:24:17,828: INFO: common: created directory at: artifacts/data_ingestion]
+[2023-08-05 23:25:20,053: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-08-05 23:25:20,055: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-08-05 23:25:20,056: INFO: common: yaml file: schema.yaml loaded successfully]
+[2023-08-05 23:25:20,056: INFO: common: created directory at: artifacts]
+[2023-08-05 23:25:20,057: INFO: common: created directory at: artifacts/data_ingestion]
+[2023-08-05 23:25:20,582: INFO: 1687568260: artifacts/data_ingestion/data.zip download! with following info: 
+content-disposition: attachment; filename=SAIL.NS.csv
+content-type: text/csv;charset=utf-8
+vary: Origin
+cache-control: private, max-age=10, stale-while-revalidate=20
+y-rid: 2g80svpict389
+x-yahoo-request-id: 2g80svpict389
+x-request-id: dc473262-6273-4a7c-951d-4ffc10b0f8e0
+x-envoy-upstream-service-time: 100
+date: Sat, 05 Aug 2023 17:55:20 GMT
+server: ATS
+x-envoy-decorator-operation: finance-chart-api--mtls-production-sg3.finance-k8s.svc.yahoo.local:4080/*
+Age: 1
+Strict-Transport-Security: max-age=31536000
+Referrer-Policy: no-referrer-when-downgrade
+X-Frame-Options: SAMEORIGIN
+X-XSS-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+Transfer-Encoding: chunked
+Connection: close
+
+]
+[2023-08-05 23:25:33,529: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-08-05 23:25:33,530: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-08-05 23:25:33,531: INFO: common: yaml file: schema.yaml loaded successfully]
+[2023-08-05 23:25:33,532: INFO: common: created directory at: artifacts]
+[2023-08-05 23:25:33,533: INFO: common: created directory at: artifacts/data_ingestion]
+[2023-08-05 23:25:33,534: INFO: 2174002776: File already exists of size: ~ 471 KB]
+[2023-08-05 23:26:21,475: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-08-05 23:26:21,477: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-08-05 23:26:21,478: INFO: common: yaml file: schema.yaml loaded successfully]
+[2023-08-05 23:26:21,479: INFO: common: created directory at: artifacts]
+[2023-08-05 23:26:21,480: INFO: common: created directory at: artifacts/data_ingestion]
+[2023-08-05 23:26:21,481: INFO: 2174002776: File already exists of size: ~ 471 KB]
+[2023-08-05 23:26:39,024: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-08-05 23:26:39,026: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-08-05 23:26:39,028: INFO: common: yaml file: schema.yaml loaded successfully]
+[2023-08-05 23:26:39,030: INFO: common: created directory at: artifacts]
+[2023-08-05 23:26:39,031: INFO: common: created directory at: artifacts/data_ingestion]
+[2023-08-05 23:26:39,032: INFO: 2174002776: File already exists of size: ~ 471 KB]
+[2023-08-05 23:28:52,447: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-08-05 23:28:52,448: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-08-05 23:28:52,449: INFO: common: yaml file: schema.yaml loaded successfully]
+[2023-08-05 23:28:52,450: INFO: common: created directory at: artifacts]
+[2023-08-05 23:28:52,451: INFO: common: created directory at: artifacts/data_ingestion]
+[2023-08-05 23:28:52,915: INFO: 2174002776: artifacts/data_ingestion/data.zip download! with following info: 
+Server: GitHub.com
+Date: Sat, 05 Aug 2023 17:58:53 GMT
+Content-Type: text/html; charset=utf-8
+Vary: X-PJAX, X-PJAX-Container, Turbo-Visit, Turbo-Frame, Accept-Encoding, Accept, X-Requested-With
+ETag: W/"f005c7f82d3b16b5fdfbec197aa9285b"
+Cache-Control: max-age=0, private, must-revalidate
+Strict-Transport-Security: max-age=31536000; includeSubdomains; preload
+X-Frame-Options: deny
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Referrer-Policy: no-referrer-when-downgrade
+Content-Security-Policy: default-src 'none'; base-uri 'self'; child-src github.com/assets-cdn/worker/ gist.github.com/assets-cdn/worker/; connect-src 'self' uploads.github.com objects-origin.githubusercontent.com www.githubstatus.com collector.github.com raw.githubusercontent.com api.github.com github-cloud.s3.amazonaws.com github-production-repository-file-5c1aeb.s3.amazonaws.com github-production-upload-manifest-file-7fdce7.s3.amazonaws.com github-production-user-asset-6210df.s3.amazonaws.com cdn.optimizely.com logx.optimizely.com/v1/events *.actions.githubusercontent.com productionresultssa0.blob.core.windows.net/ productionresultssa1.blob.core.windows.net/ productionresultssa2.blob.core.windows.net/ productionresultssa3.blob.core.windows.net/ productionresultssa4.blob.core.windows.net/ wss://*.actions.githubusercontent.com github-production-repository-image-32fea6.s3.amazonaws.com github-production-release-asset-2e65be.s3.amazonaws.com insights.github.com wss://alive.github.com; font-src github.githubassets.com; form-action 'self' github.com gist.github.com objects-origin.githubusercontent.com; frame-ancestors 'none'; frame-src viewscreen.githubusercontent.com notebooks.githubusercontent.com; img-src 'self' data: github.githubassets.com media.githubusercontent.com camo.githubusercontent.com identicons.github.com avatars.githubusercontent.com github-cloud.s3.amazonaws.com objects.githubusercontent.com objects-origin.githubusercontent.com secured-user-images.githubusercontent.com/ user-images.githubusercontent.com/ private-user-images.githubusercontent.com opengraph.githubassets.com github-production-user-asset-6210df.s3.amazonaws.com customer-stories-feed.github.com spotlights-feed.github.com *.githubusercontent.com; manifest-src 'self'; media-src github.com user-images.githubusercontent.com/ secured-user-images.githubusercontent.com/ private-user-images.githubusercontent.com; script-src github.githubassets.com; style-src 'unsafe-inline' github.githubassets.com; upgrade-insecure-requests; worker-src github.com/assets-cdn/worker/ gist.github.com/assets-cdn/worker/
+Set-Cookie: _gh_sess=KMk5kiYCAWrzpy0qvNf8rN6BnJm2x3B8OD6sU3jyOQyb9PKeSNUDNVkmzHiuwkadIBqOObDDDwAaiumi5k0FupFw%2B1YH9N5s5paKV2xpS4haK2rLY1KQEQhkoJnC%2FBhnsUncgkQNDMvTPbofn%2FnJNTiHLz9hLsjTr68DNz40UxZXh3ScS5aM2qyrgS3IktdKV7HE4kpExrn3VJ6EMRF5h%2B1YZemcBEHAfwQgqcyOuFtIJdt4%2BYYRaBrJ1yR3FEidX6MRSlk2N8GdOvHpLwdgfA%3D%3D--Am3psP9%2BKVuXzsE9--%2FR%2BssNO9Ynm99TWN8lamYg%3D%3D; Path=/; HttpOnly; Secure; SameSite=Lax
+Set-Cookie: _octo=GH1.1.2143939102.1691258333; Path=/; Domain=github.com; Expires=Mon, 05 Aug 2024 17:58:53 GMT; Secure; SameSite=Lax
+Set-Cookie: logged_in=no; Path=/; Domain=github.com; Expires=Mon, 05 Aug 2024 17:58:53 GMT; HttpOnly; Secure; SameSite=Lax
+Accept-Ranges: bytes
+Transfer-Encoding: chunked
+X-GitHub-Request-Id: E5C6:2C5F63:810AD1:955614:64CE8DDD
+connection: close
+
+]
