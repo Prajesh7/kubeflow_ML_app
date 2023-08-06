@@ -1,1 +1,3 @@
-key: val
+RandomForestRegressor:
+  n_estimators: 11
+  max_depth: 57
