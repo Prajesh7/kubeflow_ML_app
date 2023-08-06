@@ -1,7 +1,7 @@
 pandas
 mlflow
 numpy
-sklearn
+scikit-learn
 matplotlib
 pyYAML
 tqdm

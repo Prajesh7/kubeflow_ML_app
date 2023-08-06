@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SAIL stock market prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f7f7f7;
+            margin: 50px auto;
+            max-width: 500px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+
+        h1 {
+            color: #007bff;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        input[type="text"] {
+            padding: 5px;
+            width: 100%;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            margin-top: 10px;
+            padding: 8px 16px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        h2 {
+            color: #333;
+            margin-top: 20px;
+        }
+
+        p {
+            font-size: 24px;
+            font-weight: bold;
+            color: #007bff;
+        }
+    </style>
+</head>
+<body>
+    <h1>SAIL stock market prediction</h1>
+    <form action="/predict" method="post">
+        <label for="previous_open">Previous Open:</label>
+        <input type="text" id="previous_open" name="previous_open" required>
+        <br>
+        <button type="submit">Predict</button>
+    </form>
+    {% if prediction %}
+    <h2>Next Close Prediction:</h2>
+    <p>{{ prediction }}</p>
+    {% endif %}
+</body>
+</html>
