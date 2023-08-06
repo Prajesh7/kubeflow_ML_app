@@ -4,7 +4,8 @@ import os
 from mlFlowProject.entity.config_entity import (DataIngestionConfig, 
                                                 DataValidationConfig, 
                                                 DataTransformationConfig, 
-                                                ModelTrainerConfig)
+                                                ModelTrainerConfig,
+                                                ModelEvaluationConfig)
 
 class ConfigurationManager:
     def __init__(
@@ -82,3 +83,23 @@ class ConfigurationManager:
         )
         
         return model_trainer_config
+    
+    def get_model_evaluation_config(self):
+        config = self.config.model_evaluation
+        schema = self.schema.TARGET_COLUMN
+        params = self.params.RandomForestRegressor
+        
+        create_directories([config.root_dir])
+        
+        model_evaluation_config = ModelEvaluationConfig(
+            root_dir=config.root_dir,
+            train_data_path=config.train_data_path,
+            test_data_path=config.test_data_path,
+            model_path=config.model_path,
+            all_params=params,
+            metric_file_name=config.metric_file_name,
+            target_col=schema.name,
+            mlflow_uri = config.mlflow_uri
+        )
+        
+        return model_evaluation_config

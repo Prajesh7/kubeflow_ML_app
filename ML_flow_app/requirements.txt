@@ -11,4 +11,5 @@ types-PyYAML
 Flask
 Flask-Cors
 python-box==6.0.2
+boto3
 -e .
