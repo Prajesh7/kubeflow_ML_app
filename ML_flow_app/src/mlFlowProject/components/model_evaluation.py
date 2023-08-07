@@ -39,6 +39,7 @@ class ModelEvaluation:
         xtest = np.array(test_data['Open']).reshape(-1, 1)
         ytest = np.array(test_data[[self.config.target_col]]).reshape(-1)
         
+        os.environ["MLFLOW_TRACKING_URI"]='http://ec2-15-206-173-174.ap-south-1.compute.amazonaws.com:5000/'
         mlflow.set_registry_uri(self.config.mlflow_uri)
         tracking_url_type_store = urlparse(mlflow.get_tracking_uri()).scheme
         
