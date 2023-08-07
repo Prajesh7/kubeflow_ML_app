@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Prajesh/personal/ML_learning/my_work/kubeflow_app/kubeflow_ML_app/ML_flow_app/mlruns/0/f9f70bd45579421bbe32a2c1f50b1f05/artifacts
+end_time: 1691403730082
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: f9f70bd45579421bbe32a2c1f50b1f05
+run_name: hilarious-horse-242
+run_uuid: f9f70bd45579421bbe32a2c1f50b1f05
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1691403725575
+status: 3
+tags: []
+user_id: Prajesh

@@ -1,0 +1,414 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Workflow
+metadata:
+  generateName: sail-prediction-kubeflow-mlflow-pipeline-
+  annotations: {pipelines.kubeflow.org/kfp_sdk_version: 1.8.22, pipelines.kubeflow.org/pipeline_compilation_time: '2023-08-07T14:58:13.553951',
+    pipelines.kubeflow.org/pipeline_spec: '{"description": "testing sample", "inputs":
+      [{"name": "data_path", "type": "String"}], "name": "sail prediction kubeflow/mlflow
+      pipeline"}'}
+  labels: {pipelines.kubeflow.org/kfp_sdk_version: 1.8.22}
+spec:
+  entrypoint: sail-prediction-kubeflow-mlflow-pipeline
+  templates:
+  - name: data-ingestion
+    container:
+      args: []
+      command:
+      - sh
+      - -ec
+      - |
+        program_path=$(mktemp)
+        printf "%s" "$0" > "$program_path"
+        python3 -u "$program_path" "$@"
+      - |
+        def data_ingestion():
+            from mlFlowProject import logger
+            from mlFlowProject.pipeline.stage_01_data_ingestion import DataIngestionTrainingPipeline
+
+            STAGE_NAME = "data ingestion stage"
+            try:
+                logger.info(f">>>> stage {STAGE_NAME} started <<<<")
+                data_ingestion = DataIngestionTrainingPipeline()
+                data_ingestion.main()
+                logger.info(f">>>> stage {STAGE_NAME} completed <<<<\n\nx========x")
+            except Exception as e:
+                logger.exception(e)
+                raise e
+
+        import argparse
+        _parser = argparse.ArgumentParser(prog='Data ingestion', description='')
+        _parsed_args = vars(_parser.parse_args())
+
+        _outputs = data_ingestion(**_parsed_args)
+      image: prajesh7/sail_mlflow:sail_mlflow
+      volumeMounts:
+      - {mountPath: '{{inputs.parameters.data_path}}', name: t-vol}
+    inputs:
+      parameters:
+      - {name: data_path}
+      - {name: t-vol-name}
+    metadata:
+      labels:
+        pipelines.kubeflow.org/kfp_sdk_version: 1.8.22
+        pipelines.kubeflow.org/pipeline-sdk-type: kfp
+        pipelines.kubeflow.org/enable_caching: "true"
+      annotations: {pipelines.kubeflow.org/component_spec: '{"implementation": {"container":
+          {"args": [], "command": ["sh", "-ec", "program_path=$(mktemp)\nprintf \"%s\"
+          \"$0\" > \"$program_path\"\npython3 -u \"$program_path\" \"$@\"\n", "def
+          data_ingestion():\n    from mlFlowProject import logger\n    from mlFlowProject.pipeline.stage_01_data_ingestion
+          import DataIngestionTrainingPipeline\n\n    STAGE_NAME = \"data ingestion
+          stage\"\n    try:\n        logger.info(f\">>>> stage {STAGE_NAME} started
+          <<<<\")\n        data_ingestion = DataIngestionTrainingPipeline()\n        data_ingestion.main()\n        logger.info(f\">>>>
+          stage {STAGE_NAME} completed <<<<\\n\\nx========x\")\n    except Exception
+          as e:\n        logger.exception(e)\n        raise e\n\nimport argparse\n_parser
+          = argparse.ArgumentParser(prog=''Data ingestion'', description='''')\n_parsed_args
+          = vars(_parser.parse_args())\n\n_outputs = data_ingestion(**_parsed_args)\n"],
+          "image": "prajesh7/sail_mlflow:sail_mlflow"}}, "name": "Data ingestion"}',
+        pipelines.kubeflow.org/component_ref: '{}', pipelines.kubeflow.org/max_cache_staleness: POD}
+    volumes:
+    - name: t-vol
+      persistentVolumeClaim: {claimName: '{{inputs.parameters.t-vol-name}}'}
+  - name: data-transformation
+    container:
+      args: []
+      command:
+      - sh
+      - -c
+      - (PIP_DISABLE_PIP_VERSION_CHECK=1 python3 -m pip install --quiet --no-warn-script-location
+        'pandas' 'scikit-learn' 'mlFlowProject' || PIP_DISABLE_PIP_VERSION_CHECK=1
+        python3 -m pip install --quiet --no-warn-script-location 'pandas' 'scikit-learn'
+        'mlFlowProject' --user) && "$0" "$@"
+      - sh
+      - -ec
+      - |
+        program_path=$(mktemp)
+        printf "%s" "$0" > "$program_path"
+        python3 -u "$program_path" "$@"
+      - |
+        def data_transformation():
+            from mlFlowProject import logger
+            from mlFlowProject.pipeline.stage_03_data_transformation import DataTransformationTrainingPipeline
+
+            STAGE_NAME = "data transformation stage"
+            try:
+                logger.info(f">>>> stage {STAGE_NAME} started <<<<")
+                data_transform = DataTransformationTrainingPipeline()
+                data_transform.main()
+                logger.info(f">>>> stage {STAGE_NAME} completed <<<<\n\nx========x")
+            except Exception as e:
+                logger.exception(e)
+                raise e
+
+        import argparse
+        _parser = argparse.ArgumentParser(prog='Data transformation', description='')
+        _parsed_args = vars(_parser.parse_args())
+
+        _outputs = data_transformation(**_parsed_args)
+      image: prajesh7/sail_mlflow:sail_mlflow
+      volumeMounts:
+      - {mountPath: '{{inputs.parameters.data_path}}', name: t-vol}
+    inputs:
+      parameters:
+      - {name: data_path}
+      - {name: t-vol-name}
+    metadata:
+      labels:
+        pipelines.kubeflow.org/kfp_sdk_version: 1.8.22
+        pipelines.kubeflow.org/pipeline-sdk-type: kfp
+        pipelines.kubeflow.org/enable_caching: "true"
+      annotations: {pipelines.kubeflow.org/component_spec: '{"implementation": {"container":
+          {"args": [], "command": ["sh", "-c", "(PIP_DISABLE_PIP_VERSION_CHECK=1 python3
+          -m pip install --quiet --no-warn-script-location ''pandas'' ''scikit-learn''
+          ''mlFlowProject'' || PIP_DISABLE_PIP_VERSION_CHECK=1 python3 -m pip install
+          --quiet --no-warn-script-location ''pandas'' ''scikit-learn'' ''mlFlowProject''
+          --user) && \"$0\" \"$@\"", "sh", "-ec", "program_path=$(mktemp)\nprintf
+          \"%s\" \"$0\" > \"$program_path\"\npython3 -u \"$program_path\" \"$@\"\n",
+          "def data_transformation():\n    from mlFlowProject import logger\n    from
+          mlFlowProject.pipeline.stage_03_data_transformation import DataTransformationTrainingPipeline\n\n    STAGE_NAME
+          = \"data transformation stage\"\n    try:\n        logger.info(f\">>>> stage
+          {STAGE_NAME} started <<<<\")\n        data_transform = DataTransformationTrainingPipeline()\n        data_transform.main()\n        logger.info(f\">>>>
+          stage {STAGE_NAME} completed <<<<\\n\\nx========x\")\n    except Exception
+          as e:\n        logger.exception(e)\n        raise e\n\nimport argparse\n_parser
+          = argparse.ArgumentParser(prog=''Data transformation'', description='''')\n_parsed_args
+          = vars(_parser.parse_args())\n\n_outputs = data_transformation(**_parsed_args)\n"],
+          "image": "prajesh7/sail_mlflow:sail_mlflow"}}, "name": "Data transformation"}',
+        pipelines.kubeflow.org/component_ref: '{}', pipelines.kubeflow.org/max_cache_staleness: POD}
+    volumes:
+    - name: t-vol
+      persistentVolumeClaim: {claimName: '{{inputs.parameters.t-vol-name}}'}
+  - name: data-validation
+    container:
+      args: []
+      command:
+      - sh
+      - -c
+      - (PIP_DISABLE_PIP_VERSION_CHECK=1 python3 -m pip install --quiet --no-warn-script-location
+        'pandas' 'mlFlowProject' || PIP_DISABLE_PIP_VERSION_CHECK=1 python3 -m pip
+        install --quiet --no-warn-script-location 'pandas' 'mlFlowProject' --user)
+        && "$0" "$@"
+      - sh
+      - -ec
+      - |
+        program_path=$(mktemp)
+        printf "%s" "$0" > "$program_path"
+        python3 -u "$program_path" "$@"
+      - |
+        def data_validation():
+            from mlFlowProject import logger
+            from mlFlowProject.pipeline.stage_02_data_validation import DataValidationTrainingPipeline
+
+            STAGE_NAME = "data validation stage"
+            try:
+                logger.info(f">>>> stage {STAGE_NAME} started <<<<")
+                data_val = DataValidationTrainingPipeline()
+                data_val.main()
+                logger.info(f">>>> stage {STAGE_NAME} completed <<<<\n\nx========x")
+            except Exception as e:
+                logger.exception(e)
+                raise e
+
+        import argparse
+        _parser = argparse.ArgumentParser(prog='Data validation', description='')
+        _parsed_args = vars(_parser.parse_args())
+
+        _outputs = data_validation(**_parsed_args)
+      image: prajesh7/sail_mlflow:sail_mlflow
+      volumeMounts:
+      - {mountPath: '{{inputs.parameters.data_path}}', name: t-vol}
+    inputs:
+      parameters:
+      - {name: data_path}
+      - {name: t-vol-name}
+    metadata:
+      labels:
+        pipelines.kubeflow.org/kfp_sdk_version: 1.8.22
+        pipelines.kubeflow.org/pipeline-sdk-type: kfp
+        pipelines.kubeflow.org/enable_caching: "true"
+      annotations: {pipelines.kubeflow.org/component_spec: '{"implementation": {"container":
+          {"args": [], "command": ["sh", "-c", "(PIP_DISABLE_PIP_VERSION_CHECK=1 python3
+          -m pip install --quiet --no-warn-script-location ''pandas'' ''mlFlowProject''
+          || PIP_DISABLE_PIP_VERSION_CHECK=1 python3 -m pip install --quiet --no-warn-script-location
+          ''pandas'' ''mlFlowProject'' --user) && \"$0\" \"$@\"", "sh", "-ec", "program_path=$(mktemp)\nprintf
+          \"%s\" \"$0\" > \"$program_path\"\npython3 -u \"$program_path\" \"$@\"\n",
+          "def data_validation():\n    from mlFlowProject import logger\n    from
+          mlFlowProject.pipeline.stage_02_data_validation import DataValidationTrainingPipeline\n\n    STAGE_NAME
+          = \"data validation stage\"\n    try:\n        logger.info(f\">>>> stage
+          {STAGE_NAME} started <<<<\")\n        data_val = DataValidationTrainingPipeline()\n        data_val.main()\n        logger.info(f\">>>>
+          stage {STAGE_NAME} completed <<<<\\n\\nx========x\")\n    except Exception
+          as e:\n        logger.exception(e)\n        raise e\n\nimport argparse\n_parser
+          = argparse.ArgumentParser(prog=''Data validation'', description='''')\n_parsed_args
+          = vars(_parser.parse_args())\n\n_outputs = data_validation(**_parsed_args)\n"],
+          "image": "prajesh7/sail_mlflow:sail_mlflow"}}, "name": "Data validation"}',
+        pipelines.kubeflow.org/component_ref: '{}', pipelines.kubeflow.org/max_cache_staleness: POD}
+    volumes:
+    - name: t-vol
+      persistentVolumeClaim: {claimName: '{{inputs.parameters.t-vol-name}}'}
+  - name: model-evaluation
+    container:
+      args: []
+      command:
+      - sh
+      - -c
+      - (PIP_DISABLE_PIP_VERSION_CHECK=1 python3 -m pip install --quiet --no-warn-script-location
+        'pandas' 'mlflow' 'scikit-learn' 'numpy' 'mlFlowProject' || PIP_DISABLE_PIP_VERSION_CHECK=1
+        python3 -m pip install --quiet --no-warn-script-location 'pandas' 'mlflow'
+        'scikit-learn' 'numpy' 'mlFlowProject' --user) && "$0" "$@"
+      - sh
+      - -ec
+      - |
+        program_path=$(mktemp)
+        printf "%s" "$0" > "$program_path"
+        python3 -u "$program_path" "$@"
+      - |
+        def model_evaluation():
+            from mlFlowProject import logger
+            from mlFlowProject.pipeline.stage_05_model_evaluation import ModelEvaluationTrainingPipeline
+
+            STAGE_NAME = "Model evaluation stage"
+            try:
+                logger.info(f">>>> stage {STAGE_NAME} started <<<<")
+                model_eval = ModelEvaluationTrainingPipeline()
+                model_eval.main()
+                logger.info(f">>>> stage {STAGE_NAME} completed <<<<\n\nx========x")
+            except Exception as e:
+                logger.exception(e)
+                raise e
+
+        import argparse
+        _parser = argparse.ArgumentParser(prog='Model evaluation', description='')
+        _parsed_args = vars(_parser.parse_args())
+
+        _outputs = model_evaluation(**_parsed_args)
+      image: prajesh7/sail_mlflow:sail_mlflow
+      volumeMounts:
+      - {mountPath: '{{inputs.parameters.data_path}}', name: t-vol}
+    inputs:
+      parameters:
+      - {name: data_path}
+      - {name: t-vol-name}
+    metadata:
+      labels:
+        pipelines.kubeflow.org/kfp_sdk_version: 1.8.22
+        pipelines.kubeflow.org/pipeline-sdk-type: kfp
+        pipelines.kubeflow.org/enable_caching: "true"
+      annotations: {pipelines.kubeflow.org/component_spec: '{"implementation": {"container":
+          {"args": [], "command": ["sh", "-c", "(PIP_DISABLE_PIP_VERSION_CHECK=1 python3
+          -m pip install --quiet --no-warn-script-location ''pandas'' ''mlflow'' ''scikit-learn''
+          ''numpy'' ''mlFlowProject'' || PIP_DISABLE_PIP_VERSION_CHECK=1 python3 -m
+          pip install --quiet --no-warn-script-location ''pandas'' ''mlflow'' ''scikit-learn''
+          ''numpy'' ''mlFlowProject'' --user) && \"$0\" \"$@\"", "sh", "-ec", "program_path=$(mktemp)\nprintf
+          \"%s\" \"$0\" > \"$program_path\"\npython3 -u \"$program_path\" \"$@\"\n",
+          "def model_evaluation():\n    from mlFlowProject import logger\n    from
+          mlFlowProject.pipeline.stage_05_model_evaluation import ModelEvaluationTrainingPipeline\n\n    STAGE_NAME
+          = \"Model evaluation stage\"\n    try:\n        logger.info(f\">>>> stage
+          {STAGE_NAME} started <<<<\")\n        model_eval = ModelEvaluationTrainingPipeline()\n        model_eval.main()\n        logger.info(f\">>>>
+          stage {STAGE_NAME} completed <<<<\\n\\nx========x\")\n    except Exception
+          as e:\n        logger.exception(e)\n        raise e\n\nimport argparse\n_parser
+          = argparse.ArgumentParser(prog=''Model evaluation'', description='''')\n_parsed_args
+          = vars(_parser.parse_args())\n\n_outputs = model_evaluation(**_parsed_args)\n"],
+          "image": "prajesh7/sail_mlflow:sail_mlflow"}}, "name": "Model evaluation"}',
+        pipelines.kubeflow.org/component_ref: '{}', pipelines.kubeflow.org/max_cache_staleness: POD}
+    volumes:
+    - name: t-vol
+      persistentVolumeClaim: {claimName: '{{inputs.parameters.t-vol-name}}'}
+  - name: model-trainer
+    container:
+      args: []
+      command:
+      - sh
+      - -c
+      - (PIP_DISABLE_PIP_VERSION_CHECK=1 python3 -m pip install --quiet --no-warn-script-location
+        'pandas' 'scikit-learn' 'numpy' 'mlFlowProject' || PIP_DISABLE_PIP_VERSION_CHECK=1
+        python3 -m pip install --quiet --no-warn-script-location 'pandas' 'scikit-learn'
+        'numpy' 'mlFlowProject' --user) && "$0" "$@"
+      - sh
+      - -ec
+      - |
+        program_path=$(mktemp)
+        printf "%s" "$0" > "$program_path"
+        python3 -u "$program_path" "$@"
+      - |
+        def model_trainer():
+            from mlFlowProject import logger
+            from mlFlowProject.pipeline.stage_04_model_trainer import ModelTrainerTrainingPipeline
+
+            STAGE_NAME = "Model training stage"
+            try:
+                logger.info(f">>>> stage {STAGE_NAME} started <<<<")
+                model_train = ModelTrainerTrainingPipeline()
+                model_train.main()
+                logger.info(f">>>> stage {STAGE_NAME} completed <<<<\n\nx========x")
+            except Exception as e:
+                logger.exception(e)
+                raise e
+
+        import argparse
+        _parser = argparse.ArgumentParser(prog='Model trainer', description='')
+        _parsed_args = vars(_parser.parse_args())
+
+        _outputs = model_trainer(**_parsed_args)
+      image: prajesh7/sail_mlflow:sail_mlflow
+      volumeMounts:
+      - {mountPath: '{{inputs.parameters.data_path}}', name: t-vol}
+    inputs:
+      parameters:
+      - {name: data_path}
+      - {name: t-vol-name}
+    metadata:
+      labels:
+        pipelines.kubeflow.org/kfp_sdk_version: 1.8.22
+        pipelines.kubeflow.org/pipeline-sdk-type: kfp
+        pipelines.kubeflow.org/enable_caching: "true"
+      annotations: {pipelines.kubeflow.org/component_spec: '{"implementation": {"container":
+          {"args": [], "command": ["sh", "-c", "(PIP_DISABLE_PIP_VERSION_CHECK=1 python3
+          -m pip install --quiet --no-warn-script-location ''pandas'' ''scikit-learn''
+          ''numpy'' ''mlFlowProject'' || PIP_DISABLE_PIP_VERSION_CHECK=1 python3 -m
+          pip install --quiet --no-warn-script-location ''pandas'' ''scikit-learn''
+          ''numpy'' ''mlFlowProject'' --user) && \"$0\" \"$@\"", "sh", "-ec", "program_path=$(mktemp)\nprintf
+          \"%s\" \"$0\" > \"$program_path\"\npython3 -u \"$program_path\" \"$@\"\n",
+          "def model_trainer():\n    from mlFlowProject import logger\n    from mlFlowProject.pipeline.stage_04_model_trainer
+          import ModelTrainerTrainingPipeline\n\n    STAGE_NAME = \"Model training
+          stage\"\n    try:\n        logger.info(f\">>>> stage {STAGE_NAME} started
+          <<<<\")\n        model_train = ModelTrainerTrainingPipeline()\n        model_train.main()\n        logger.info(f\">>>>
+          stage {STAGE_NAME} completed <<<<\\n\\nx========x\")\n    except Exception
+          as e:\n        logger.exception(e)\n        raise e\n\nimport argparse\n_parser
+          = argparse.ArgumentParser(prog=''Model trainer'', description='''')\n_parsed_args
+          = vars(_parser.parse_args())\n\n_outputs = model_trainer(**_parsed_args)\n"],
+          "image": "prajesh7/sail_mlflow:sail_mlflow"}}, "name": "Model trainer"}',
+        pipelines.kubeflow.org/component_ref: '{}', pipelines.kubeflow.org/max_cache_staleness: POD}
+    volumes:
+    - name: t-vol
+      persistentVolumeClaim: {claimName: '{{inputs.parameters.t-vol-name}}'}
+  - name: sail-prediction-kubeflow-mlflow-pipeline
+    inputs:
+      parameters:
+      - {name: data_path}
+    dag:
+      tasks:
+      - name: data-ingestion
+        template: data-ingestion
+        dependencies: [t-vol]
+        arguments:
+          parameters:
+          - {name: data_path, value: '{{inputs.parameters.data_path}}'}
+          - {name: t-vol-name, value: '{{tasks.t-vol.outputs.parameters.t-vol-name}}'}
+      - name: data-transformation
+        template: data-transformation
+        dependencies: [data-validation, t-vol]
+        arguments:
+          parameters:
+          - {name: data_path, value: '{{inputs.parameters.data_path}}'}
+          - {name: t-vol-name, value: '{{tasks.t-vol.outputs.parameters.t-vol-name}}'}
+      - name: data-validation
+        template: data-validation
+        dependencies: [data-ingestion, t-vol]
+        arguments:
+          parameters:
+          - {name: data_path, value: '{{inputs.parameters.data_path}}'}
+          - {name: t-vol-name, value: '{{tasks.t-vol.outputs.parameters.t-vol-name}}'}
+      - name: model-evaluation
+        template: model-evaluation
+        dependencies: [model-trainer, t-vol]
+        arguments:
+          parameters:
+          - {name: data_path, value: '{{inputs.parameters.data_path}}'}
+          - {name: t-vol-name, value: '{{tasks.t-vol.outputs.parameters.t-vol-name}}'}
+      - name: model-trainer
+        template: model-trainer
+        dependencies: [data-transformation, t-vol]
+        arguments:
+          parameters:
+          - {name: data_path, value: '{{inputs.parameters.data_path}}'}
+          - {name: t-vol-name, value: '{{tasks.t-vol.outputs.parameters.t-vol-name}}'}
+      - {name: t-vol, template: t-vol}
+  - name: t-vol
+    resource:
+      action: create
+      manifest: |
+        apiVersion: v1
+        kind: PersistentVolumeClaim
+        metadata:
+          name: '{{workflow.name}}-t-vol'
+        spec:
+          accessModes:
+          - ReadWriteOnce
+          resources:
+            requests:
+              storage: 1Gi
+    outputs:
+      parameters:
+      - name: t-vol-manifest
+        valueFrom: {jsonPath: '{}'}
+      - name: t-vol-name
+        valueFrom: {jsonPath: '{.metadata.name}'}
+      - name: t-vol-size
+        valueFrom: {jsonPath: '{.status.capacity.storage}'}
+    metadata:
+      labels:
+        pipelines.kubeflow.org/kfp_sdk_version: 1.8.22
+        pipelines.kubeflow.org/pipeline-sdk-type: kfp
+        pipelines.kubeflow.org/enable_caching: "true"
+  arguments:
+    parameters:
+    - {name: data_path}
+  serviceAccountName: pipeline-runner

@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Prajesh/personal/ML_learning/my_work/kubeflow_app/kubeflow_ML_app/ML_flow_app/mlruns/0/6c6e3518a9874bc39cdcc0487bfaf40a/artifacts
+end_time: 1691400889088
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 6c6e3518a9874bc39cdcc0487bfaf40a
+run_name: funny-croc-173
+run_uuid: 6c6e3518a9874bc39cdcc0487bfaf40a
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1691400885078
+status: 3
+tags: []
+user_id: Prajesh

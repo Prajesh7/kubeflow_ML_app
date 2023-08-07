@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Prajesh/personal/ML_learning/my_work/kubeflow_app/kubeflow_ML_app/ML_flow_app/mlruns/0/eecce35e7b4a43359bad610ef4188f1d/artifacts
+end_time: 1691403326614
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: eecce35e7b4a43359bad610ef4188f1d
+run_name: colorful-zebra-772
+run_uuid: eecce35e7b4a43359bad610ef4188f1d
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1691403322220
+status: 3
+tags: []
+user_id: Prajesh

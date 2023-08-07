@@ -28,4 +28,4 @@ model_evaluation:
   test_data_path: artifacts/data_transformation/test.csv
   model_path: artifacts/model_trainer/model.joblib
   metric_file_name: artifacts/model_evaluation/metrics.json
-  mlflow_uri: http://ec2-43-205-243-196.ap-south-1.compute.amazonaws.com:5000/
+  mlflow_uri: http://ec2-15-206-173-174.ap-south-1.compute.amazonaws.com:5000/

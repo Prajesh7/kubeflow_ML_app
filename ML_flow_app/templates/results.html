@@ -8,7 +8,7 @@
             text-align: center;
             background-color: #f7f7f7;
             margin: 50px auto;
-            max-width: 500px;
+            max-width: 800px;
             padding: 20px;
             border: 1px solid #ccc;
             border-radius: 10px;
@@ -23,10 +23,20 @@
             font-weight: bold;
             color: #007bff;
         }
+
+        img {
+            max-width: 100%;
+            margin-top: 20px;
+        }
     </style>
 </head>
 <body>
     <h2>Next Close Prediction:</h2>
     <p>{{ prediction }}</p>
+    
+    {% if plot %}
+    <h2>Close Price over Time</h2>
+    <img src="data:image/png;base64, {{ plot }}" alt="Close Price Plot">
+    {% endif %}
 </body>
 </html>

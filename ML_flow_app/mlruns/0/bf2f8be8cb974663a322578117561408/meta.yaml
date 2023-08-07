@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Prajesh/personal/ML_learning/my_work/kubeflow_app/kubeflow_ML_app/ML_flow_app/mlruns/0/bf2f8be8cb974663a322578117561408/artifacts
+end_time: 1691403889648
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: bf2f8be8cb974663a322578117561408
+run_name: smiling-shrike-28
+run_uuid: bf2f8be8cb974663a322578117561408
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1691403885576
+status: 3
+tags: []
+user_id: Prajesh

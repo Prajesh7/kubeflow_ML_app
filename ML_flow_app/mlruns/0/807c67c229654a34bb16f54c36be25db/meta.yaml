@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Prajesh/personal/ML_learning/my_work/kubeflow_app/kubeflow_ML_app/ML_flow_app/mlruns/0/807c67c229654a34bb16f54c36be25db/artifacts
+end_time: 1691329640168
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 807c67c229654a34bb16f54c36be25db
+run_name: useful-gnu-330
+run_uuid: 807c67c229654a34bb16f54c36be25db
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1691329636313
+status: 3
+tags: []
+user_id: Prajesh

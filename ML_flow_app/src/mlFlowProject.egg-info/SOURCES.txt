@@ -9,6 +9,7 @@ src/mlFlowProject/components/__init__.py
 src/mlFlowProject/components/data_ingestion.py
 src/mlFlowProject/components/data_transformation.py
 src/mlFlowProject/components/data_validation.py
+src/mlFlowProject/components/model_evaluation.py
 src/mlFlowProject/components/model_trainer.py
 src/mlFlowProject/config/__init__.py
 src/mlFlowProject/config/configuration.py
@@ -16,9 +17,11 @@ src/mlFlowProject/constants/__init__.py
 src/mlFlowProject/entity/__init__.py
 src/mlFlowProject/entity/config_entity.py
 src/mlFlowProject/pipeline/__init__.py
+src/mlFlowProject/pipeline/prediction.py
 src/mlFlowProject/pipeline/stage_01_data_ingestion.py
 src/mlFlowProject/pipeline/stage_02_data_validation.py
 src/mlFlowProject/pipeline/stage_03_data_transformation.py
 src/mlFlowProject/pipeline/stage_04_model_trainer.py
+src/mlFlowProject/pipeline/stage_05_model_evaluation.py
 src/mlFlowProject/utils/__init__.py
 src/mlFlowProject/utils/common.py
