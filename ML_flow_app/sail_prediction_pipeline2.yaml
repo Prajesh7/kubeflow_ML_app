@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Workflow
 metadata:
   generateName: sail-prediction-kubeflow-mlflow-pipeline-
-  annotations: {pipelines.kubeflow.org/kfp_sdk_version: 1.8.22, pipelines.kubeflow.org/pipeline_compilation_time: '2023-08-07T17:05:02.725711',
+  annotations: {pipelines.kubeflow.org/kfp_sdk_version: 1.8.22, pipelines.kubeflow.org/pipeline_compilation_time: '2023-08-07T17:18:54.057699',
     pipelines.kubeflow.org/pipeline_spec: '{"description": "testing sample", "inputs":
       [{"name": "data_path", "type": "String"}], "name": "sail prediction kubeflow/mlflow
       pipeline"}'}
